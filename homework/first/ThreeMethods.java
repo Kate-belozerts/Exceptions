@@ -1,5 +1,6 @@
 package homework.first;
 
+import java.io.*;
 import java.util.List;
 
 
@@ -8,6 +9,7 @@ public class ThreeMethods {
         arrayEmpty(new int[]{}); // ArrayIndexOutOfBoundsException
         accerman(4, 4); // StackOverflowError
         creteNullException(); // NullPointerException
+        findFile(); // FileNotFoundException специально не добавляла обработку :)
     }
 
     public static long accerman(long m, long n) {
@@ -31,5 +33,10 @@ public class ThreeMethods {
         for (Integer i : list) {
             System.out.println(i);
         }
+    }
+
+    public static void findFile() {
+        FileReader reader = new FileReader("file.txt");
+        reader.read();
     }
 }
