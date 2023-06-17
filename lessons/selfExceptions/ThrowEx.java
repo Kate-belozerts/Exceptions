@@ -1,4 +1,4 @@
-package lessons;
+package lessons.selfExceptions;
 
 import java.io.IOException;
 

@@ -1,0 +1,6 @@
+Ann=3
+Elena=5
+Vladimir=8
+Kate=?
+Anastasiya=?
+Leo=3
