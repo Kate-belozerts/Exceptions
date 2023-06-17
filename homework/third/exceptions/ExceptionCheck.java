@@ -1,6 +1,5 @@
-package homework.third;
+package homework.third.exceptions;
 
-import homework.third.exceptions.WrongInput;
 import homework.third.terminal.Terminal;
 
 public class ExceptionCheck {
