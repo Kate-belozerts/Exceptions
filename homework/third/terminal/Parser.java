@@ -34,11 +34,9 @@ public class Parser {
         for (String param : arr) {
             if (param.length() == 1) {
                 sex(param);
-            }
-            if (param.contains(".")) {
+            } else if (param.contains(".")) {
                 birth(param);
-            }
-            if (param.matches("[a-zA-z]*") ||
+            } else if (param.matches("[a-zA-z]*") ||
                     param.matches("[а-яёА-ЯЁ]+")) {
                 name(param);
             } else if (param.matches("\\d+")) {
@@ -84,11 +82,9 @@ public class Parser {
     }
 
     private void name(String name) {
-        if (name.length() > 1) {
-            if (!name.equals(info.get("name2")) && !name.equals(info.get("name3"))) info.putIfAbsent("name1", name);
-            if (!name.equals(info.get("name1")) && !name.equals(info.get("name3"))) info.putIfAbsent("name2", name);
-            if (!name.equals(info.get("name1")) && !name.equals(info.get("name2"))) info.putIfAbsent("name3", name);
-        }
+        if (!name.equals(info.get("name2")) && !name.equals(info.get("name3"))) info.putIfAbsent("name1", name);
+        if (!name.equals(info.get("name1")) && !name.equals(info.get("name3"))) info.putIfAbsent("name2", name);
+        if (!name.equals(info.get("name1")) && !name.equals(info.get("name2"))) info.putIfAbsent("name3", name);
         this.fileName = info.get("name1");
     }
 
